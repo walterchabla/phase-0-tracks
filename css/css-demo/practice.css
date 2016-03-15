@@ -1,0 +1,25 @@
+#contact-info {
+		font-size: 2em;
+    font-size: .8em;
+	}
+
+.job {
+	background-color: #e9e5dc;
+	border-radius: 20px;
+	padding: 2px;
+	margin-bottom: 5px;
+	margin-top: 5px;
+}
+
+.list {
+	font-size: .8em
+}
+
+a:link {
+    color: pink;
+}
+a:hover {
+    color: green;
+    }
+section.volunteer-gig > h3 { color: red; }
+
