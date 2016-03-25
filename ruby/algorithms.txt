@@ -1,0 +1,13 @@
+First walk straing until you see two buttoms and press the buttom that is on top, that calls the elevator to go up.
+Wait a few seconds until the doors open, walk staright inside the elevator, once you reach the wall turn around.
+Then move slighty to right and straight. There is going to be 10 buttoms, its design in three columns with four rows. The first row has three buttoms numbers from left column ti right column 7,6,5. The second row has three buttoms numbers form left column to right coluumn 4,3,2. The third row has three buttoms a closing door, Lobby, and opening door. The last row has a Emercency buttom in the second column. Start from the right column and first row. If the buttom says number 6 stop and press it. Otherwise skip it until the you find the right buttom. Once press wait about 10 seconds, the elevator will move. Once it stops the door should open. Move slighty to the left and walk straight and you will be out in the room to do my bidding.
+
+
+
+
+
+
+ 7 6 5  
+ 4 3 2 
+ .>|<  L  <|>
+ Emergency
