@@ -1,0 +1,11 @@
+First walk straing until you see two buttoms and press the buttom that is on top, that calls the elevator to go up.
+Wait a few seconds until the doors open, walk staright inside the elevator, once you reach the wall turn around.
+Then move slighty to right and straight. There is going to be 10 buttoms, its design in three columns with four rows. The first row has three buttoms numbers from left column ti right column 7,6,5. The second row has three buttoms numbers form left column to right coluumn 4,3,2. The third row has three buttoms a closing door, Lobby, and opening door. The last row has a Emercency buttom in the second column. Start from the right column and first row. If the buttom says number 6 stop and press it. Otherwise skip it until the you find the right buttom. Once press wait about 10 seconds, the elevator will move. Once it stops the door should open. Move slighty to the left and walk straight and you will be out in the room to do my bidding.
+ (Elevator buttoms)
+ 7 6 5  
+ 4 3 2 
+ .>|<  L  <|>
+ Emergency.
+
+               Grabbing Breakfast Task 
+First I walk into the Kitchen, I go to the fridge and check if there are some eggs and ham. I grab those and take them out of the fridge and put them next to the stove. I walk to the cabinet and grab a pan, I put the pan on the stove.I turn on the stove 1/4 on. Next I grab the bottle of oil and add a little bit of oil in the pan. I put away the bottle of oil. I wait about 15 seconds. Then I grab the eggs and I hit them on the stove, not hard so they dont go all over the place, I hit them until I see a crack and the open it on top of the pan. I wait about 15 seconds and them I add the ham. Next I open the cabinet and grab a spoon. I mix the eggs and ham. I make scrambled eggs with ham. I mix them until egg its cooked, that is about 3 minutes. Then I grab a plate from the cabinet, I close the cabinet. I put the eggs and ham from the pan on the plate. I put the pan in the dishwasher. Then I take the plate and put in the table, I open the cabinet and grab a fork. I close the cabinet. Then I go to the table and sit down. Finally I start eating EGGS and HAM. 
