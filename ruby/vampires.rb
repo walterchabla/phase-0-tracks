@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 puts "How many employees will be processed?"
 employee_number = gets.chomp.to_i
 start = 0
@@ -56,35 +55,3 @@ puts "#{name} is #{age} years old and was born in #{year_born}. #{name} would li
 end
 
 puts "Actually, never mind! What do these questions have to do with anything? Let's all be friends."
-=======
-puts "What is your name?"
-name = gets.chomp
-
-puts "How old are you?"
-age = gets.chomp.to_i
-
-puts "What year were you born?"
-year_born = gets.chomp.to_i
-
-#first exercise in the list of
-if 2016 - age == year_born
-  puts "Probably not a vampire."
-else
-  puts "Probably a vampire."
-end
-
-puts "Our company serves garlic. Should we order some for you?"
-order_garlic = gets.chomp
-
-puts "Would you like to enroll in the company's health insurence?"
-health_insurence = gets.chomp
-
-#first exercise in the list of
-if 2016 - age == year_born
-  puts "Probably not a vampire."
-else
-  puts "Defnitely a vampire."
-end
-
-
->>>>>>> f13db6c789cc9f3f8425c01cfc9df604039ab219
