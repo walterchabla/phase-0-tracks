@@ -6,7 +6,11 @@ end
 method { puts "This is the block"}
 
 #release 1, do the thing, 1 and 2
-#this part needs a hash
+countrys = {"America" => "United States", "Europe" => "Germany", "Asia" => "China"}
+countrys.each do |country|
+  puts country
+end
+
 names = ["Walter", "Mike", "Dmitris", "Olga"]
 p names
 names.each do |name|
@@ -54,29 +58,15 @@ end
 p numbers
 
 #release 2, do the thing, 4
-#still working on this part of the do the thing
-#numbers = [1, 2, 3, 4, 5, 6, 7, 8]
-#count = 0
-  #numbers.map! do |number|
-      #if number % 2
-          #while count < number
-            #p number
-            #   numbers.delete(number)
-          #end
-          #count += 1
-       #p number
-      #end
-  #end
-#p numbers
-
-
-words = ["apple", "dog", "car", "house", "name"]
-length_words = words.length
-index = 0
-  words.map! do |word|
-    if word == str
-      while index < length_words
-        p word
+#My partner and I had truble doing this part, this is what we got to.
+numbers = [1, 2, 3, 4, 5, 6, 7, 8]
+count = 0
+  numbers.map! do |number|
+      if number <= 4
+          while count > number
+            number = numbers.delete(number)
+          end
+          count += 1
       end
-    end
   end
+p numbers
