@@ -46,10 +46,18 @@ bark.reverse_word("Bobby")
 #release 2, do the thing
 
 class Soccer_Players
+<<<<<<< HEAD
 
   def initialize
     puts "Hello"
   end
+=======
+ # array = Array.new
+
+  #def initialize
+   # puts "Hello"
+  #end
+>>>>>>> master
 
   def num_moves(stri)
     number = stri.to_i
@@ -65,6 +73,7 @@ end
 array = []
 soccer = Soccer_Players.new
 
+<<<<<<< HEAD
 50.times do
   soccer = Soccer_Players.new
   array << soccer
@@ -72,6 +81,16 @@ end
 
 
 p array
+=======
+50.times do soccer = Soccer_Players.new
+end
+#counter = 0
+#while counter < 50
+ # soccer = Soccer_Players.new
+  #counter += 1
+#end
+
+>>>>>>> master
 soccer.num_moves(20)
 
 soccer.players("Messi")
