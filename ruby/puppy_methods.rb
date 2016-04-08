@@ -47,30 +47,32 @@ bark.reverse_word("Bobby")
 
 class Soccer_Players
 
-  def initialize
-    puts "Hello"
-  end
+ def initialize
+   puts "Hello"
+ end
 
-  def num_moves(stri)
-    number = stri.to_i
-    puts "This players knows #{number} moves."
-  end
+ def num_moves(stri)
+   number = stri.to_i
+   puts "This players knows #{number} moves."
+ end
 
-  def players(name)
-    puts "#{name} is one of the greatest player in soccer history."
-  end
+ def players(name)
+   puts "#{name} is one of the greatest player in soccer history."
+ end
 
-end
+  array = []
 
-array = []
-soccer = Soccer_Players.new
-
-50.times do
+  50.times do
   soccer = Soccer_Players.new
   array << soccer
+  array
+  end
 end
 
-p array
+soccer = Soccer_Players.new
+
+soccer.num_moves(20)
+soccer.players("Maradona")
 
 soccer.num_moves(20)
 
