@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #Release 0: Bring Santa to Life
 
 class Santa
@@ -88,7 +87,5 @@ santas << Santa.new("gender fluid", "Mystical Creature(unicorn)")
 santas << Santa.new("N/A", "N/A")
 
 print santas
-=======
->>>>>>> master
 
 
