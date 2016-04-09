@@ -22,9 +22,5 @@ class TodoList
     @arr.fetch(num)
   end
 
-<<<<<<< HEAD
 end
 
-=======
-end
->>>>>>> feature-branch
