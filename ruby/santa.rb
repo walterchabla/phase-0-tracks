@@ -51,28 +51,21 @@ class Santa
   $example_genders = ["male", "female", "agender", "bigender", "gender_fluid", "N/A"]
   $example_ethnicities = ["Latino", "black", "white", "Japanese", "prefer not say", "Mystical world", "Italians"]
 
-  def random_santas
     random_santa = []
-    santas_number = 0
-    while santas_number < 50
-      gender = $example_genders.shuffle.last
-      @gender = gender
+    10.times do
+      @gender = $example_genders.shuffle.last
 
-      ethnicity = $example_ethnicities.shuffle.last
-      @ethnicity = ethnicity
+      @ethnicity = $example_ethnicities.shuffle.last
       random_santa = [@gender] + [@ethnicity]
       p random_santa
-      santas_number += 1
     end
-  end
-
 end
 
 
 p clouse = Santa.new("male", "latino")
 p clouse.celebrate_birthday
 p clouse.get_mad_at("Vixen")
-p clouse.random_santas
+#p clouse.random_santas
 #clouse.speak
 #clouse.eat_milk_and_cookies("chocolate chip")
 
