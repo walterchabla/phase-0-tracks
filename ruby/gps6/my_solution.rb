@@ -4,7 +4,7 @@
 # We spent [#] hours on this challenge.
 
 # EXPLANATION OF require_relative
-#Having the code from another file being avaliable in this file.
+#require_relative is having the code from another file being avaliable in this file.
 #require_relative works if your in the same folder or directory, as require would work for files that are outside the directory or folder.
 require_relative 'state_data'
 
@@ -82,7 +82,11 @@ alaska = VirusPredictor.new("Alaska", STATE_DATA["Alaska"][:population_density],
 alaska.virus_effects
 
 
-
-
 #=======================================================================
 # Reflection Section
+# The difference between the two different hash syntaxes are that when you use '=>' you can use another hash inside the hash as its value or declare the variable, and when you use the collins you are declaring the key and giving the value.
+#require_relative is having the code from another file being avaliable in this file. require_relative works if your in the same folder or directory, as require would work for files that are outside the directory or folder.
+# some ways to iterate through a hash is using #each, #sort and for.
+# When refactoring virus_effects what stood out about the variables were that they where instance variables and that they were already being initialiaze in the method initialize.
+# the concepts that I solidify in this challenge were using ruqire_relative and working with class and methods, and how to iterate throught a hash.
+
