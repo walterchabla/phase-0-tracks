@@ -9,6 +9,10 @@ function reverse_word(word) {
   return word.split('').reverse().join('');
 }
 
-console.log(reverse_word("walter"));
-
+var new_word = reverse_word("Walter");
+console.log(new_word);
 // I have some help from google to write the function.
+
+if (2 && 2) {
+  console.log(new_word);
+}
