@@ -61,19 +61,23 @@ function comparing(object1, object2) {
 // RANDOM_WORDS(LENGTH)
 // Input for the function:
 // Array with random words,
-// Use a for loop to loop the array for number of words to return   random words back
+// Use a for loop to loop the array for number,
+// Use Math.random to get random words
 // Output for the function:
 // Random 3 words on a array
 
 function random_words(integer) {
+  var new_word = [];
   for (var i = 0; i < integer; i++){
-    var letters = ["Hello", "Space", "Lake", "Walter", "DBC", "Mac", "Dominos", "Training", "GSGGbs", "LOL", "LMAO"];
-    var random = Math.floor(Math.random() * letters.length);
-    var new_letter = letters[random];
-    console.log(new_letter);
+    var words = ["Hello", "Space", "Lake", "Walter", "DBC", "Mac", "Dominos", "Training", "GSGGbs", "LOL", "LMAO"];
+    var random = Math.floor(Math.random() * words.length);
+    var word = words[random];
+    new_word.push(word)
+    console.log(new_word);
     }
 }
 
+// Driver Code:
 
 var word = ["Letter", "Practice", "This is a big phrase"]
 var test = ["word1", "Walter", "Car", "longest word"];
@@ -84,5 +88,6 @@ var dog = {name: 'Boby', age: 6};
 var cat = {age: 8, name: 'Speedy'};
 comparing(dog, cat);
 
-random_words(5);
-
+random_words(2);
+longest_word(random_words(10))
+// It does not want to read the array in the function when longest word funtion wants tp use random words functions array.
