@@ -65,13 +65,14 @@ function comparing(object1, object2) {
 // Output for the function:
 // Random 3 words on a array
 
-function random_words(integer)
-  array
-
-
-
-
-
+function random_words(integer) {
+  for (var i = 0; i < integer; i++){
+    var letters = ["Hello", "Space", "Lake", "Walter", "DBC", "Mac", "Dominos", "Training", "GSGGbs", "LOL", "LMAO"];
+    var random = Math.floor(Math.random() * letters.length);
+    var new_letter = letters[random];
+    console.log(new_letter);
+    }
+}
 
 
 var word = ["Letter", "Practice", "This is a big phrase"]
@@ -82,4 +83,6 @@ longest_word(word);
 var dog = {name: 'Boby', age: 6};
 var cat = {age: 8, name: 'Speedy'};
 comparing(dog, cat);
+
+random_words(5);
 
