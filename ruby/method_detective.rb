@@ -28,8 +28,9 @@ prepend = " suspects".prepend("the usual")
 puts prepend
 puts "=> 'the usual suspects'"
 
-# "The case of the disappearing last letter".<???>
-# => "The case of the disappearing last lette"
+chop = "The case of the disappearing last letter".chop
+puts chop
+puts "=> 'The case of the disappearing last lette'"
 
 # "The mystery of the missing first letter".<???>
 # => "he mystery of the missing first letter"
