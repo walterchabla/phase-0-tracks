@@ -6,14 +6,15 @@
 
 swapcase = "iNvEsTiGaTiOn".swapcase
 puts swapcase
-puts "=> “InVeStIgAtIoN”"
+puts "=> 'InVeStIgAtIoN'"
 
 insert = "zom".insert(1, "o")
 puts insert
-puts "=> “zoom”"
+puts "=> 'zoom'"
 
-# "enhance".<???>
-# => "    enhance    "
+center = "enhance".center(4)
+puts center
+puts "=>'    enhance    '"
 
 # "Stop! You’re under arrest!".<???>
 # => "STOP! YOU’RE UNDER ARREST!"
