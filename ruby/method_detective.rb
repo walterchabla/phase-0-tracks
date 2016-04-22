@@ -16,8 +16,9 @@ center = "enhance".center(4)
 puts center
 puts "=>'    enhance    '"
 
-# "Stop! You’re under arrest!".<???>
-# => "STOP! YOU’RE UNDER ARREST!"
+upcase = "Stop! You’re under arrest!".upcase
+puts upcase
+puts "=> 'STOP! YOU’RE UNDER ARREST!'"
 
 # "the usual".<???>
 #=> "the usual suspects"
