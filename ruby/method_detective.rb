@@ -32,12 +32,13 @@ chop = "The case of the disappearing last letter".chop
 puts chop
 puts "=> 'The case of the disappearing last lette'"
 
-chomp = "The mystery of the missing first letter".delete("T")
-puts chomp
+delete = "The mystery of the missing first letter".delete("T")
+puts delete
 puts "=> 'he mystery of the missing first letter'"
 
-# "Elementary,    my   dear        Watson!".<???>
-# => "Elementary, my dear Watson!"
+squeeze = "Elementary,    my   dear        Watson!".squeeze
+puts squeeze
+puts "=> 'Elementary, my dear Watson!'"
 
 # "z".<???>
 # => 122
