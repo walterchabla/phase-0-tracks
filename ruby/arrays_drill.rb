@@ -1,2 +1,4 @@
-new_array = []
-p new_array
+cars = []
+p cars
+cars << "Mustang" << "Lambo" << "Audi" << "Jeep" << "Aston Martin"
+p cars
