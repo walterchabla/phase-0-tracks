@@ -9,3 +9,7 @@ p cars
 # 3) Deleting item at index 2
 cars.delete_at(2)
 p cars
+
+# 4) Inserting a new item at index 2
+cars.insert(2, "VW")
+p cars
