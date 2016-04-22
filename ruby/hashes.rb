@@ -5,15 +5,15 @@
 # name = gets.chomp (use this gets.chompfor all questions, use different variables)
 # if answer is equal to a symbol(key) ask for another answer and update the hash
 # save their answer and put into a hash:
-# declare a new hash with symbols and answers as values:
+# declare a new hash, then add symbols to the hash with answers as values:
 # applicant = {name: name, age: age, likes_animals: animals, decor theme: theme, room: room}
 # prints the hash with all the information
 
 puts "What is your name?"
-name = gets.chomp
+name = gets.chomp.capitalize
 if name == "name"
   puts "Please put a valid name?"
-  name = gets.chomp
+  name = gets.chomp.capitalize
 end
 
 puts "How old are you?"
@@ -33,7 +33,10 @@ theme = gets.chomp
 puts "Which room would you like to decorate?"
 room = gets.chomp
 
+applicant = Hash.new
 applicant = {name: name, age: age, likes_animals: animals, decor_theme: theme, room: room}
 
 puts applicant
+
+exit
 
