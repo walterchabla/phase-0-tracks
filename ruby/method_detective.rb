@@ -32,8 +32,9 @@ chop = "The case of the disappearing last letter".chop
 puts chop
 puts "=> 'The case of the disappearing last lette'"
 
-# "The mystery of the missing first letter".<???>
-# => "he mystery of the missing first letter"
+chomp = "The mystery of the missing first letter".delete("T")
+puts chomp
+puts "=> 'he mystery of the missing first letter'"
 
 # "Elementary,    my   dear        Watson!".<???>
 # => "Elementary, my dear Watson!"
