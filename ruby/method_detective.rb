@@ -8,8 +8,9 @@ swapcase = "iNvEsTiGaTiOn".swapcase
 puts swapcase
 puts "=> “InVeStIgAtIoN”"
 
-# "zom".<???>
-# => “zoom”
+insert = "zom".insert(1, "o")
+puts insert
+puts "=> “zoom”"
 
 # "enhance".<???>
 # => "    enhance    "
