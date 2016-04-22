@@ -20,8 +20,9 @@ upcase = "Stop! You’re under arrest!".upcase
 puts upcase
 puts "=> 'STOP! YOU’RE UNDER ARREST!'"
 
-# "the usual".<???>
-#=> "the usual suspects"
+l_just = "the usual".ljust(19, " suspescts")
+puts l_just
+puts "=> 'the usual suspects'"
 
 # " suspects".<???>
 # => "the usual suspects"
