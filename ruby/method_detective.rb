@@ -24,8 +24,9 @@ l_just = "the usual".ljust(19, " suspescts")
 puts l_just
 puts "=> 'the usual suspects'"
 
-# " suspects".<???>
-# => "the usual suspects"
+prepend = " suspects".prepend("the usual")
+puts prepend
+puts "=> 'the usual suspects'"
 
 # "The case of the disappearing last letter".<???>
 # => "The case of the disappearing last lette"
