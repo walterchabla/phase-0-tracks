@@ -1,43 +1,66 @@
-def add_to_array(arr, item)
-  add_to_array = arr + Array.[](item)
+#Release 2: Use Arrays in Methods
+# 1) method that takes 3 parameters
+# def method: build_array(item1, item2, item3)
+# inside the method:
+# arr = []
+# arr << item1 << item2 << item3
+# p arr
+#output:
+# returns an arrar of those items
+def build_array(item1, item2, item3)
+  arr = []
+  arr << item1 << item2 << item3
+  p arr
 end
 
-def array_return(x, y, z)
-  array_return = []
-  array_return.insert(0, x, y, z)
+# 2) method that takes an array and an item as parameters,
+# def method: add_to_array(array, item)
+# inside method:
+# new_array = array << item
+# p new_array
+# output:
+# returns the array with the item added
+def add_to_array(array, item)
+  new_array = array << item
+  p new_array
 end
 
 
-p add_to_array([1,3], "stuff")
-p add_to_array(["stuff", "things"], 10)
-p add_to_array([1, 2, 3], false)
-p add_to_array([true, false], -19)
-p add_to_array(["s", "z"], 1.5)
+#Release 1: Explore the Docs
+# 1)Initializing new array
+cars = []
+p cars
 
- array = []
-p array
+# 2) Addiding items to the array
+cars << "Mustang" << "Lambo" << "Audi" << "Jeep" << "Aston Martin"
+p cars
 
-#Attempted to simply add new variables to array without creating another variable
-#Works in IRB, however returns two empty arrays when the program is ran
-#Had to create a new variable to store the updates, for the program to run correctly
-array_new = array + [ "Walter", "Olya", "20", "New York", "food" ]
-p array_new
+# 3) Deleting item at index 2
+cars.delete_at(2)
+p cars
 
-array_new.delete_at(2)
-p array_new
+# 4) Inserting a new item at index 2
+cars.insert(2, "VW")
+p cars
 
-array_new.insert(2, "new")
-p array_new
+# 5) Removing the first item of the array without having to refer to its index
+cars.shift
+p cars
 
-array_new.delete("Walter")
-p array_new
+# 6) Ask the array whether it includes a certain item. Print the result of this method call
+includes = cars.include?("Ferrari")
+puts "Does this array contains 'Ferrari': #{includes}"
 
-answer = array_new.include?("new")
-puts "The array includes word new. #{answer}."
+# 7) Initializing another array with items
+more_cars = ["Honda", "Porsche", "Toyota"]
+p more_cars
 
-food = ["chicken", "pizza"]
+# 8) adding the two arrays together
+cars_combine = cars.concat(more_cars)
+p cars_combine
 
-combined_array = array_new + food
-p combined_array
+# Drive code
 
-p array_return("nose", "ear", "hand")
+build_array(1, "two", nil)
+add_to_array([], "a")
+add_to_array(["a", "b", "c", 1, 2], 3)
