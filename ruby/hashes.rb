@@ -1,36 +1,42 @@
-#Program that allows interior designer to enter details of a client
-#prgram is going to ask for name, age, number of children, decor theme, Which room and budget.
-#user is going to enter the data.
-# user data needs to be converted to appropriate data.
-#print a hash when all data is collected.
-#check if the user date is valid
+# Release 3: Use a Hash in a Program
+
+# ask 5 questions for the designer or user about name, age, likes animals,decor theme and which room?
+# store the answer:
+# name = gets.chomp (use this gets.chompfor all questions, use different variables)
+# if answer is equal to a symbol(key) ask for another answer and update the hash
+# save their answer and put into a hash:
+# declare a new hash, then add symbols to the hash with answers as values:
+# applicant = {name: name, age: age, likes_animals: animals, decor theme: theme, room: room}
+# prints the hash with all the information
 
 puts "What is your name?"
-name = gets.chomp
+name = gets.chomp.capitalize
+if name == "name"
+  puts "Please put a valid name?"
+  name = gets.chomp.capitalize
+end
 
-puts "What is your age?"
+puts "How old are you?"
 age = gets.chomp.to_i
 
-puts "How many children you have?"
-num_children = gets.chomp.to_i
+puts "Do you like animals, true or false?"
+animals = gets.chomp
+if animals == "true"
+  animals = true
+elsif animals == "false"
+  animals = false
+end
+
+puts "What is your decor theme?"
+theme = gets.chomp
 
 puts "Which room would you like to decorate?"
 room = gets.chomp
 
-puts "What is your budget?"
-budget = gets.chomp.to_i
+applicant = Hash.new
+applicant = {name: name, age: age, likes_animals: animals, decor_theme: theme, room: room}
 
-client = {name: name, age: age,num_children: num_children, room: room, budget: budget}
+puts applicant
 
-puts client
-
-if room == "room"
-  puts "Please select which room:"
-  room = gets.chomp
-  update = {room: room}
-  client.merge!(update)
-  puts client
-  else
-end
-
+exit
 
