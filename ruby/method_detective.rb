@@ -4,50 +4,48 @@
 # When there's more than one suspect who could have
 # committed the crime, add additional calls to prove it.
 
-swap_case = "iNvEsTiGaTiOn".swapcase
-puts swap_case
-# => "InVeStIgAtIoN"
+swapcase = "iNvEsTiGaTiOn".swapcase
+puts swapcase
+puts "=> 'InVeStIgAtIoN'"
 
-inser = "zom".insert(2, 'o')
-puts inser
-# => "zoom"
+insert = "zom".insert(1, "o")
+puts insert
+puts "=> 'zoom'"
 
-cent = "enhance".center(15)
-puts cent
-#=> "    enhance    "
+center = "enhance".center(4)
+puts center
+puts "=>'    enhance    '"
 
-up_case = "Stop! You’re under arrest!".upcase
-puts up_case
-# => "STOP! YOU’RE UNDER ARREST!"
+upcase = "Stop! You’re under arrest!".upcase
+puts upcase
+puts "=> 'STOP! YOU’RE UNDER ARREST!'"
 
-str = "the usual"
-str.replace "the usual suspects"
-puts str
-#=> "the usual suspects"
+l_just = "the usual".ljust(19, " suspescts")
+puts l_just
+puts "=> 'the usual suspects'"
 
-sus = " suspects"
-sus.prepend("the usual")
-puts sus
-#=> "the usual suspects"
+prepend = " suspects".prepend("the usual")
+puts prepend
+puts "=> 'the usual suspects'"
 
 chop = "The case of the disappearing last letter".chop
 puts chop
-# => "The case of the disappearing last lette"
+puts "=> 'The case of the disappearing last lette'"
 
 delete = "The mystery of the missing first letter".delete("T")
 puts delete
-# => "he mystery of the missing first letter"
+puts "=> 'he mystery of the missing first letter'"
 
-squeeze = "Elementary  ,    my   dear      Watson!".squeeze(" ")
+squeeze = "Elementary,    my   dear        Watson!".squeeze
 puts squeeze
-# => "Elementary, my dear Watson!"
+puts "=> 'Elementary, my dear Watson!'"
 
-letter = "z".ord
-puts letter
-# => 122
-# Is the number on the alphabet and starts with 98 and fineshes on 122.
+ord = "z".ord
+puts ord
+puts "=> 122"
 # (What is the significance of the number 122 in relation to the character z?)
+# Is the number that 'z' would be in the dictionary.
 
-string = "How many times does the letter 'a' appear in this string?".count("a")
-puts string
-#=> 4
+count = "How many times does the letter 'a' appear in this string?".count("a")
+puts count
+puts "=> 4"
