@@ -1,3 +1,20 @@
+#Release 2: Use Arrays in Methods
+# 1) method that takes 3 parameters
+# def method: build_array(item1, item2, item3)
+# inside the method:
+# arr = []
+# arr << item1 << item2 << item3
+# p arr
+#output:
+# returns an arrar of those items
+def build_array(item1, item2, item3)
+  arr = []
+  arr << item1 << item2 << item3
+  p arr
+end
+
+
+#Release 1: Explore the Docs
 # 1)Initializing new array
 cars = []
 p cars
@@ -29,3 +46,7 @@ p more_cars
 # 8) adding the two arrays together
 cars_combine = cars.concat(more_cars)
 p cars_combine
+
+# Drive code
+
+build_array(1, "two", nil)
