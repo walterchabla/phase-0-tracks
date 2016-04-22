@@ -44,6 +44,8 @@ ord = "z".ord
 puts ord
 puts "=> 122"
 # (What is the significance of the number 122 in relation to the character z?)
+# Is the number that 'z' would be in the dictionary.
 
-# "How many times does the letter 'a' appear in this string?".<???>
-# => 4
+count = "How many times does the letter 'a' appear in this string?".count("a")
+puts count
+puts "=> 4"
