@@ -21,3 +21,11 @@ p cars
 # 6) Ask the array whether it includes a certain item. Print the result of this method call
 includes = cars.include?("Ferrari")
 puts "Does this array contains 'Ferrari': #{includes}"
+
+# 7) Initializing another array with items
+more_cars = ["Honda", "Porsche", "Toyota"]
+p more_cars
+
+# 8) adding the two arrays together
+cars_combine = cars.concat(more_cars)
+p cars_combine
