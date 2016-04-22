@@ -17,3 +17,7 @@ p cars
 # 5) Removing the first item of the array without having to refer to its index
 cars.shift
 p cars
+
+# 6) Ask the array whether it includes a certain item. Print the result of this method call
+includes = cars.include?("Ferrari")
+puts "Does this array contains 'Ferrari': #{includes}"
