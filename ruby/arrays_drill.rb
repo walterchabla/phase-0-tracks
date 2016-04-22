@@ -13,6 +13,18 @@ def build_array(item1, item2, item3)
   p arr
 end
 
+# 2) method that takes an array and an item as parameters,
+# def method: add_to_array(array, item)
+# inside method:
+# new_array = array << item
+# p new_array
+# output:
+# returns the array with the item added
+def add_to_array(array, item)
+  new_array = array << item
+  p new_array
+end
+
 
 #Release 1: Explore the Docs
 # 1)Initializing new array
@@ -50,3 +62,5 @@ p cars_combine
 # Drive code
 
 build_array(1, "two", nil)
+add_to_array([], "a")
+add_to_array(["a", "b", "c", 1, 2], 3)
