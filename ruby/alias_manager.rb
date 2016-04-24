@@ -1,67 +1,93 @@
-#program that swapps the first and last name and changes all of the vowels (a, e, i, o, or u) to the next vowel in 'aeiou',
-#and all of the consonants to the next consonant in the alphabet.
-#methods and arrays need to be created
-#If successfully implement the algorithm, "Felicia Torres" will become "Vussit Gimodoe".
+# Release 0: Attempt a Tricky Algorithm
+# a method that takes a spy's real name (e.g., "Felicia Torres") and creates a fake name with it
 
-#Release 0: Attempt a Tricky Algorithm
-puts "What is your first name agent?"
-first_name = gets.chomp.downcase
-
-puts "What is your last name agent?"
-last_name = gets.chomp.downcase
-
-def next_vowel(vowel)
-  vowel.tr('aeiou', 'eioua')
+# a method that swaps names, method name:
+# swap_name that takes one parameter(name)
+# inside the method:
+# name.split.rotate.join(" ")
+# name is going to be split and return an array, then the array its going to be rotated last join then and that is going to give a string.
+# end the method
+# output:
+# name swaped
+def swap_name(name)
+  name.split.rotate.join(' ')
 end
-#puts next_vowel("Hey I take change vowels")
 
-def next_consonant(consonant)
-  consonant.tr('bcdfghjklmnpqrstvwxyz', 'cdfghjklmnpqrstvwxyzb')
+# a method that changes a vowel to the net vowel, method name:
+# next_vowel that takes one parameter (vowels)
+# inside the method:
+# vowels.tr('aeiou', 'eioua')
+# it will swith vowels to the next vowel
+# end the method
+# output:
+# vowels changed to the next vowel
+def next_vowel(vowels)
+  vowels.tr('aeiou', 'eioua')
 end
-#puts next_consonant("Hi, I change consonants")
 
-def fake_name(first, second)
-   arr =[]
-   first_fake = ""
-  if first == first
-    first_fake += next_consonant(next_vowel(first)).capitalize
-    arr.push(first_fake)
-    p arr
-
-   second_fake = ""
-   second == second
-    second_fake += next_consonant(next_vowel(second)).capitalize
-    arr.push(second_fake)
-    p arr
-  end
-  arr.reverse!
+# method that changes a consonant to next consonant, method name:
+# next_consonant that takes a parameter (consonants)
+# inside the method:
+# consonants.tr('bcdfghjklmnpqrstvwxyz', 'cdfghjklmnpqrstvwxyzb')
+# it will swith to the next consonant
+# end the method
+# output:
+# consonants changed to the next consonants
+def next_consonant(consonants)
+  consonants.tr('bcdfghjklmnpqrstvwxyz', 'cdfghjklmnpqrstvwxyzb')
 end
-p fake_name(first_name, last_name)
+
+# a method that creates a fake name for the agent, method name:
+# fake_agent_name, that takes a parameter (name)
+# inside the method:
+# using the other methods that were created to create a fake name
+# deal with upcases:
+# word = name.downcase
+# fake_name = next_consonant(next_vowel(swap_name(word)))
+# puts fake_name.split.map(&:capitalize).join(' ')
+
+# end the method
+# output:
+# creates a fake agent name with vowels and consonants change to the next letter and name swaped.
+def fake_agent_name(name)
+  word = name.downcase
+  fake_name = next_consonant(next_vowel(swap_name(word)))
+  fake_name.split.map(&:capitalize).join(' ')
+end
 
 #Release 1: Provide a User Interface
-puts "When your done you can type 'quit', press enter to continue."
+puts "Hey there special agent!"
+puts "We can create fake names for you."
+puts "Type some names to see, when your done type 'quit'."
 agent_name = gets.chomp
-puts "What is your name agent?"
-idx = 0
-while idx != "quit"
-    agent_name = gets.chomp
-    idx += 1
-    break if agent_name == "quit"
+store_name = [agent_name]
+store_fake_name = []
+while agent_name != 'quit' do
+  p created_name = fake_agent_name(agent_name)
+  store_fake_name << created_name
 
-def fake_name(name)
-   arr =[]
-   first_fake = ""
-  if name == name
-    first_fake += next_consonant(next_vowel(name)).capitalize
-    arr.push(first_fake)
+  puts "Type another name:"
+  agent_name = gets.chomp
+  store_name << agent_name
+  store_name.delete_if {|word| word == 'quit'}
+  store_name
+
+# Release 2: Store the Aliases
+# IF statement and WHILE loop use to print history of real names enter and fakenames return.
+   if agent_name == 'quit'
+    i = 0
+    while store_name[i] != store_fake_name[i] do
+      puts "Agent #{store_name[i]} is also known as agent #{store_fake_name[i]}."
+      i += 1
+    end
   end
 end
-p fake_name(agent_name)
-end
-
-#Release 2: Store the Aliases
-#i could not store the agents name and print it, I am going to ask for help for this part.
 
 
+#driver code
 
-
+#p swap_name("walter chabla")
+#p next_vowel("walter chabla")
+#p next_consonant("walter chabla")
+#fake_agent_name("walter chabla")
+#fake_agent_name("Felicia Torres")
