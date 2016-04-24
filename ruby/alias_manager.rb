@@ -52,7 +52,7 @@ end
 def fake_agent_name(name)
   word = name.downcase
   fake_name = next_consonant(next_vowel(swap_name(word)))
-  puts fake_name.split.map(&:capitalize).join(' ')
+  fake_name.split.map(&:capitalize).join(' ')
 end
 
 #Release 1: Provide a User Interface
@@ -61,16 +61,39 @@ puts "We can create fake names for you."
 puts "Type some names to see, when your done type 'quit'."
 agent_name = gets.chomp
 store_name = [agent_name]
+store_fake_name = []
 while agent_name != 'quit' do
-  fake_agent_name(agent_name)
+  p created_name = fake_agent_name(agent_name)
+  store_fake_name << created_name
+
   puts "Type another name:"
   agent_name = gets.chomp
   store_name << agent_name
-  p store_name
+  store_name.delete_if {|word| word == 'quit'}
+  store_name
+
+   if agent_name == 'quit'
+    i = 0
+    while store_name[i] != store_fake_name[i] do
+      puts "Agent #{store_name[i]} is also known as agent #{store_fake_name[i]}."
+      i += 1
+    end
+  end
+
 end
 
 # Release 2: Store the Aliases
-fake_names = {agent_name => fake_agent_name(agent_name)}
+
+#puts "\n#{store_name.join(" ")} is also know as #{store_fake_name.join(" ")}\n"
+#fake_names = {
+#  store_name => store_fake_name
+#}
+#fake_names.each do |real, fake|
+#i = 0
+#while store_name[i] == store_fake_name[i]
+ # puts "#{store_name[i]} is known as #{store_fake_name[i]} }"
+  #i += 1
+#end
 
 #driver code
 
