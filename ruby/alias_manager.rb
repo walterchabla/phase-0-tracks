@@ -24,19 +24,24 @@ def next_vowel(vowels)
 end
 
 # method that changes a consonant to next consonant, method name:
-# next_consonant that takes a parameter (consonant)
+# next_consonant that takes a parameter (consonants)
 # inside the method:
-# consonant.tr('bcdfghjklmnpqrstvwxyz', 'cdfghjklmnpqrstvwxyzb')
+# consonants.tr('bcdfghjklmnpqrstvwxyz', 'cdfghjklmnpqrstvwxyzb')
 # it will swith to the next consonant
 # output:
 # consonants changed to the next consonants
+def next_consonant(consonants)
+  consonants.tr('bcdfghjklmnpqrstvwxyz', 'cdfghjklmnpqrstvwxyzb')
+end
 
 # a method that creates a fake name for the agent, method name:
 # fake_agent_name, that takes a parameter (name)
 # inside the method:
 # using the other methods that wer created
-# fake_name = next_consonant(next_vowel(swap_name(name)))
-# puts fake_name
+# deal with upcases
+# word = name.downcase
+# fake_name = next_consonant(next_vowel(swap_name(word)))
+# puts fake_name.capitalize
 # output:
 # creates a fake agent name with vowels and consonants change to the next letter and name swaped.
 
@@ -44,3 +49,4 @@ end
 
 p swap_name("walter chabla")
 p next_vowel("walter chabla")
+p next_consonant("walter chabla")
