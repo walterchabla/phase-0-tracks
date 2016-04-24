@@ -31,6 +31,19 @@ soccer_stadium = {
       "far to watch the game",
       "lowest price"
     ]
+  },
+
+  "field" => {
+    "goalmouth" => 2,
+    "soccer_players" => {
+      "teams" => 2,
+      "number_players" => 22
+    },
+    "field_type" => [
+      "grass",
+      "120 yards long",
+      "80 yards wide"
+    ]
   }
 }
 
@@ -44,4 +57,7 @@ soccer_stadium["middle_seats"]["chair_type"][2] = "not so expensive"
 p soccer_stadium["middle_seats"]["chair_type"]
 
 p soccer_stadium["last_seats"]["chair_type"]
+
+p soccer_stadium["field"]["goalmouth"]
+p soccer_stadium["field"]["field_type"][2]
 
