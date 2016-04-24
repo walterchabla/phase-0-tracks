@@ -14,9 +14,22 @@ soccer_stadium = {
       "comfortable",
       "close to the game"
     ]
-  }
+  },
+
+  "middle_seats" => {
+    "available_seats" => 20000,
+    "chair_type" => [
+      "not so comfortable",
+      "not so close to the game"
+    ]
+  },
 }
 
 
 # drive code
 p soccer_stadium["front_seats"]["chair_type"][1]
+p soccer_stadium["front_seats"]["available_seats"]
+
+p soccer_stadium["middle_seats"]["available_seats"]
+soccer_stadium["middle_seats"]["chair_type"][2] = "not so expensive"
+p soccer_stadium["middle_seats"]["chair_type"]
