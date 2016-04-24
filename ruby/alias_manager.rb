@@ -19,6 +19,9 @@ end
 # it will swith vowels to the next vowel
 # output:
 # vowels changed to the next vowel
+def next_vowel(vowels)
+  vowels.tr('aeiou', 'eioua')
+end
 
 # method that changes a consonant to next consonant, method name:
 # next_consonant that takes a parameter (consonant)
@@ -40,3 +43,4 @@ end
 #driver code
 
 p swap_name("walter chabla")
+p next_vowel("walter chabla")
