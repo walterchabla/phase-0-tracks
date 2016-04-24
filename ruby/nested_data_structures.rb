@@ -23,6 +23,15 @@ soccer_stadium = {
       "not so close to the game"
     ]
   },
+
+  "last_seats" => {
+    "available_seats" => 20000,
+    "chair_type" => [
+      "regular chair",
+      "far to watch the game",
+      "lowest price"
+    ]
+  }
 }
 
 
@@ -33,3 +42,6 @@ p soccer_stadium["front_seats"]["available_seats"]
 p soccer_stadium["middle_seats"]["available_seats"]
 soccer_stadium["middle_seats"]["chair_type"][2] = "not so expensive"
 p soccer_stadium["middle_seats"]["chair_type"]
+
+p soccer_stadium["last_seats"]["chair_type"]
+
