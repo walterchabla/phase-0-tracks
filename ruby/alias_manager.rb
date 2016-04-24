@@ -72,6 +72,8 @@ while agent_name != 'quit' do
   store_name.delete_if {|word| word == 'quit'}
   store_name
 
+# Release 2: Store the Aliases
+# IF statement and WHILE loop use to print history of real names enter and fakenames return.
    if agent_name == 'quit'
     i = 0
     while store_name[i] != store_fake_name[i] do
@@ -79,21 +81,8 @@ while agent_name != 'quit' do
       i += 1
     end
   end
-
 end
 
-# Release 2: Store the Aliases
-
-#puts "\n#{store_name.join(" ")} is also know as #{store_fake_name.join(" ")}\n"
-#fake_names = {
-#  store_name => store_fake_name
-#}
-#fake_names.each do |real, fake|
-#i = 0
-#while store_name[i] == store_fake_name[i]
- # puts "#{store_name[i]} is known as #{store_fake_name[i]} }"
-  #i += 1
-#end
 
 #driver code
 
