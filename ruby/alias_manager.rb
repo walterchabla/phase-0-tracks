@@ -53,14 +53,29 @@ def fake_agent_name(name)
   word = name.downcase
   fake_name = next_consonant(next_vowel(swap_name(word)))
   puts fake_name.split.map(&:capitalize).join(' ')
-
 end
 
+#Release 1: Provide a User Interface
+puts "Hey there special agent!"
+puts "We can create fake names for you."
+puts "Type some names to see, when your done type 'quit'."
+agent_name = gets.chomp
+store_name = [agent_name]
+while agent_name != 'quit' do
+  fake_agent_name(agent_name)
+  puts "Type another name:"
+  agent_name = gets.chomp
+  store_name << agent_name
+  p store_name
+end
+
+# Release 2: Store the Aliases
+fake_names = {agent_name => fake_agent_name(agent_name)}
 
 #driver code
 
-p swap_name("walter chabla")
-p next_vowel("walter chabla")
-p next_consonant("walter chabla")
-fake_agent_name("walter chabla")
-fake_agent_name("Felicia Torres")
+#p swap_name("walter chabla")
+#p next_vowel("walter chabla")
+#p next_consonant("walter chabla")
+#fake_agent_name("walter chabla")
+#fake_agent_name("Felicia Torres")
