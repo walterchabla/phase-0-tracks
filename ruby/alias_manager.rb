@@ -8,6 +8,9 @@
 # name is going to be split and return an array, then the array its going to be rotated last join then and that is going to give a string.
 # output:
 # name swaped
+def swap_name(name)
+  name.split.rotate.join(' ')
+end
 
 # a method that changes a vowel to the net vowel, method name:
 # next_vowel that takes one parameter (vowels)
@@ -34,4 +37,6 @@
 # output:
 # creates a fake agent name with vowels and consonants change to the next letter and name swaped.
 
+#driver code
 
+p swap_name("walter chabla")
