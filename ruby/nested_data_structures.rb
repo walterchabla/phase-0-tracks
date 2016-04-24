@@ -1,54 +1,63 @@
-#some information about the classroom.
-#a classroom with student and teacher desks, with supplies or stuff that is on the desks.
+# creating a data structure
+# its going to contain hash and arrays
+# its going to be about soccer stadium and its going to be a hash:
+# soccer_stadium = {}
+# inside the hash
+# keys = front_seats, middle_seats, last_seats, field
+# output:
+# being able to call items that are inside the soccer_stadium
 
-classroom = {
-  classroom_info: {
-  num_students: 15,
-  subject: "math",
-  student_not_attended:[]
-  },
-  student_desk: {
-    desk_num: 12,
-    student: {
-      name: "Miguel",
-      student_supplies: [
-      "pens",
-      "notebook",
-      "calculator"
+soccer_stadium = {
+  "front_seats" => {
+    "available_seats" => 10000,
+    "chair_type" => [
+      "comfortable",
+      "close to the game"
     ]
-    }
   },
-  teacher_desk: {
-    teacher_name: "Mrs. Sabol",
-    teacher_items: {
-      item1: "purse",
-      item2: "keys"
+
+  "middle_seats" => {
+    "available_seats" => 20000,
+    "chair_type" => [
+      "not so comfortable",
+      "not so close to the game"
+    ]
+  },
+
+  "last_seats" => {
+    "available_seats" => 20000,
+    "chair_type" => [
+      "regular chair",
+      "far to watch the game",
+      "lowest price"
+    ]
+  },
+
+  "field" => {
+    "goalmouth" => 2,
+    "soccer_players" => {
+      "teams" => 2,
+      "number_players" => 22
     },
-    teacher_supplies: [
-        "pens",
-        "grade book",
-        "attendance"
+    "field_type" => [
+      "grass",
+      "120 yards long",
+      "80 yards wide"
     ]
   }
 }
 
-puts classroom[:classroom_info][:subject]
 
-puts classroom[:teacher_desk][:teacher_supplies][2]
+# drive code
+p soccer_stadium["front_seats"]["chair_type"][1]
+p soccer_stadium["front_seats"]["available_seats"]
 
-puts classroom[:teacher_desk][:teacher_supplies].index("grade book")
+p soccer_stadium["middle_seats"]["available_seats"]
+soccer_stadium["middle_seats"]["chair_type"][2] = "not so expensive"
+p soccer_stadium["middle_seats"]["chair_type"]
 
-puts classroom[:student_desk][:student][:student_supplies][1]
+p soccer_stadium["last_seats"]["chair_type"]
 
-puts classroom[:student_desk][:student][:student_supplies].reverse
-
-puts classroom
-
-puts classroom[:classroom_info][:student_not_attended].push("Walter", "Mike")
-
-puts classroom
-
-
-
-
+p soccer_stadium["field"]["goalmouth"]
+p soccer_stadium["field"]["field_type"][2]
 
