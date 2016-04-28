@@ -6,74 +6,64 @@ class Puppy
   end
 
   def speak(int)
-   number = int.to_i
-   puts "Woof! " * number
- end
-
- def roll_over
-  puts "*rolls over*"
- end
-
- def dog_years(years)
-   year_dogs = years.to_i * 7
-   puts year_dogs
- end
-
- def reverse_word(word)
-  new_word = word.reverse
-  puts new_word
- end
-
- def initialize
-  puts "initializing new puppy instance..."
- end
-
-end
-
-#release 0, do the thing
-duchess = Puppy.new
-duchess.fetch("toy")
-
-bark = Puppy.new
-bark.speak(5)
-
-bark.roll_over
-
-bark.dog_years(3)
-
-bark.reverse_word("Bobby")
-
-#release 2, do the thing
-
-class Soccer_Players
-
- def initialize
-   puts "Hello"
- end
-
- def num_moves(stri)
-   number = stri.to_i
-   puts "This players knows #{number} moves."
- end
-
- def players(name)
-   puts "#{name} is one of the greatest player in soccer history."
- end
-
-  array = []
-
-  50.times do
-  soccer = Soccer_Players.new
-  array << soccer
-  array
+    int.times do
+      puts "Woof!"
+    end
   end
+
+  def roll_over
+    puts "rolls over"
+  end
+
+  def dog_years(human_years)
+    dog_years = human_years * 7
+    puts dog_years
+  end
+
+  def play_dead
+    puts "*Plays dead*"
+  end
+
+  def initialize
+    puts "Initializing new puppy instance..."
+  end
+
 end
 
-soccer = Soccer_Players.new
+# driver code
+ball = Puppy.new
+ball.fetch("ball")
+ball.speak(5)
+ball.roll_over
+ball.dog_years(4)
+ball.play_dead
 
-soccer.num_moves(20)
-soccer.players("Maradona")
+class Sport
 
-soccer.num_moves(20)
+  def initialize
+    puts "initializing..."
+  end
 
-soccer.players("Messi")
+  def favorite_sport(sport)
+    puts "#{sport} is the best sport."
+  end
+
+  def least_favorite_sport(name_sport)
+    puts "#{name_sport} is my least favorite sport in the world."
+  end
+
+end
+
+sport = Sport.new
+sport.favorite_sport("baseball")
+sport.least_favorite_sport("Curling")
+store_array = []
+50.times do
+  store_array << Sport.new
+  p store_array
+end
+
+store_array.each do |instances|
+  instances.favorite_sport("baseball")
+  instances.least_favorite_sport("curling")
+end
