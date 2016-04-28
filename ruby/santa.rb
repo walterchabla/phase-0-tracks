@@ -17,9 +17,9 @@
 # puts "Initializing Santa instance..."
 
 class Santa
+  attr_accessor :age, :ethnicity, :gender
 
-
-  reindeer_ranking = ["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
+  $reindeer_ranking = ["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
 
   def speak
     puts "Ho, ho, ho! Haaaappy holidays!"
@@ -35,9 +35,55 @@ class Santa
     @age = 0
     puts "Initializing Santa instance..."
   end
+
+  def celebrate_birthday
+    @age += 1
+  end
+
+  def get_mad_at(reindeer)
+    p $reindeer_ranking
+    $reindeer_ranking.delete_if {|reindeer_name| reindeer_name == "#{reindeer}"}
+    $reindeer_ranking << reindeer
+    p $reindeer_ranking
+  end
+
+  # setter methods
+  #def gender=(new_gender)
+    #@gender = new_gender
+  #end
+
+  # getter methods
+  #def age
+    #@age
+  #end
+
+  #def ethnicity
+    #@ethnicity
+  #end
 end
 
 # driver code
+
 santa = Santa.new("male", "latino")
 santa.speak
 santa.eat_milk_and_cookies("chocolate chip")
+santa.get_mad_at("Rudolph")
+santa.get_mad_at("Vixen")
+santa.gender = "black"
+
+#santas = []
+#santas << Santa.new("agender", "black")
+#santas << Santa.new("female", "Latino")
+#santas << Santa.new("bigender", "white")
+#santas << Santa.new("male", "Japanese")
+#santas << Santa.new("female", "prefer not to say")
+#santas << Santa.new("gender fluid", "Mystical Creature (unicorn)")
+#santas << Santa.new("N/A", "N/A")
+
+# second way to add genders and ethnicities
+santas = []
+example_genders = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A"]
+example_ethnicities = ["black", "Latino", "white", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A"]
+example_genders.length.times do |i|
+  santas << Santa.new(example_genders[i], example_ethnicities[i])
+end
