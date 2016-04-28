@@ -18,6 +18,9 @@
 
 class Santa
 
+
+  reindeer_ranking = ["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
+
   def speak
     puts "Ho, ho, ho! Haaaappy holidays!"
   end
@@ -26,12 +29,15 @@ class Santa
     puts "That was a good #{cookie}"
   end
 
-  def initialize
+  def initialize(gender, ethnicity)
+    @gender = gender
+    @ethnicity = ethnicity
+    @age = 0
     puts "Initializing Santa instance..."
   end
 end
 
 # driver code
-santa = Santa.new
+santa = Santa.new("male", "latino")
 santa.speak
 santa.eat_milk_and_cookies("chocolate chip")
