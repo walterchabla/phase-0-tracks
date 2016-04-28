@@ -34,10 +34,17 @@ class Santa
     @ethnicity = ethnicity
     @age = 0
     puts "Initializing Santa instance..."
+    puts "Santa gender is: #{@gender} and ethnicity is: #{@ethnicity}."
   end
 
   def celebrate_birthday
     @age += 1
+    year = []
+    0.upto(140) do |num|
+      year << num
+    @age = year.shuffle.last
+    end
+    puts "Santa is #{@age} years old"
   end
 
   def get_mad_at(reindeer)
@@ -70,6 +77,7 @@ santa.eat_milk_and_cookies("chocolate chip")
 santa.get_mad_at("Rudolph")
 santa.get_mad_at("Vixen")
 santa.gender = "black"
+santa.celebrate_birthday
 
 #santas = []
 #santas << Santa.new("agender", "black")
@@ -84,6 +92,7 @@ santa.gender = "black"
 santas = []
 example_genders = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A"]
 example_ethnicities = ["black", "Latino", "white", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A"]
-example_genders.length.times do |i|
-  santas << Santa.new(example_genders[i], example_ethnicities[i])
+
+10.times do
+  santas << Santa.new(example_genders.shuffle.last, example_ethnicities.shuffle.last)
 end
