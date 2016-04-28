@@ -1,84 +1,98 @@
-#Release 0: Bring Santa to Life
+# creating a class
+# class Santa
+# has three methods
+# method name:
+# def speak no parameters
+# inside the method:
+# puts "Ho, ho, ho! Haaaappy holidays!"
+# end
+# method name:
+# def eat_milk_and_cookies has a parameter (cookie)
+# inside the method
+# puts "That was a good #{cookie}"
+# end
+# method name:
+# initialize no parameter
+# inside the method
+# puts "Initializing Santa instance..."
 
 class Santa
-  attr_accessor :gender, :ethnicity
+  attr_accessor :age, :ethnicity, :gender
 
-  $reindeer_ranking = ["Rudolph","Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen" ]
-  @age = 0
+  $reindeer_ranking = ["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
 
   def speak
     puts "Ho, ho, ho! Haaaappy holidays!"
   end
 
   def eat_milk_and_cookies(cookie)
-    puts "That was a good #{cookie}!"
+    puts "That was a good #{cookie}"
   end
 
-  def initialize(gender,ethnicity)
+  def initialize(gender, ethnicity)
     @gender = gender
     @ethnicity = ethnicity
+    @age = 0
     puts "Initializing Santa instance..."
+    puts "Santa gender is: #{@gender} and ethnicity is: #{@ethnicity}."
   end
 
   def celebrate_birthday
-    age_num = []
+    @age += 1
+    year = []
     0.upto(140) do |num|
-      age_num << num
-      age_num
-      end
-    @age = age_num.shuffle.last
-    puts "Happy #{@age} Birthay Santa!!"
-  end
-
-  def get_mad_at(name)
-    if $reindeer_ranking.include?(name)
-      $reindeer_ranking.delete(name)
-      $reindeer_ranking.push(name)
-      $reindeer_ranking
+      year << num
+    @age = year.shuffle.last
     end
+    puts "Santa is #{@age} years old"
   end
 
-#getter methods
-  #def gender
-    #@gender
+  def get_mad_at(reindeer)
+    p $reindeer_ranking
+    $reindeer_ranking.delete_if {|reindeer_name| reindeer_name == "#{reindeer}"}
+    $reindeer_ranking << reindeer
+    p $reindeer_ranking
+  end
+
+  # setter methods
+  #def gender=(new_gender)
+    #@gender = new_gender
+  #end
+
+  # getter methods
+  #def age
+    #@age
   #end
 
   #def ethnicity
     #@ethnicity
   #end
-
-  #Release 4: Build Many, Many Santas
-  $example_genders = ["male", "female", "agender", "bigender", "gender_fluid", "N/A"]
-  $example_ethnicities = ["Latino", "black", "white", "Japanese", "prefer not say", "Mystical world", "Italians"]
-
-    random_santa = []
-    10.times do
-      @gender = $example_genders.shuffle.last
-
-      @ethnicity = $example_ethnicities.shuffle.last
-      random_santa = [@gender] + [@ethnicity]
-      p random_santa
-    end
 end
 
+# driver code
 
-p clouse = Santa.new("male", "latino")
-p clouse.celebrate_birthday
-p clouse.get_mad_at("Vixen")
-#p clouse.random_santas
-#clouse.speak
-#clouse.eat_milk_and_cookies("chocolate chip")
+santa = Santa.new("male", "latino")
+santa.speak
+santa.eat_milk_and_cookies("chocolate chip")
+santa.get_mad_at("Rudolph")
+santa.get_mad_at("Vixen")
+santa.gender = "black"
+santa.celebrate_birthday
 
-#Release 1: Give Santa Attributes for Christmas
+#santas = []
+#santas << Santa.new("agender", "black")
+#santas << Santa.new("female", "Latino")
+#santas << Santa.new("bigender", "white")
+#santas << Santa.new("male", "Japanese")
+#santas << Santa.new("female", "prefer not to say")
+#santas << Santa.new("gender fluid", "Mystical Creature (unicorn)")
+#santas << Santa.new("N/A", "N/A")
+
+# second way to add genders and ethnicities
 santas = []
-santas << Santa.new("agender", "black")
-santas << Santa.new("female", "Latino")
-santas << Santa.new("bigender", "white")
-santas << Santa.new("male", "Japanese")
-santas << Santa.new("female", "prefer not say")
-santas << Santa.new("gender fluid", "Mystical Creature(unicorn)")
-santas << Santa.new("N/A", "N/A")
+example_genders = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A"]
+example_ethnicities = ["black", "Latino", "white", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A"]
 
-print santas
-
-
+10.times do
+  santas << Santa.new(example_genders.shuffle.last, example_ethnicities.shuffle.last)
+end
