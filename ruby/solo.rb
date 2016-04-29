@@ -21,13 +21,18 @@ class Smoothie
   end
 
   # method name: first_fruit, no parameters,
-  # output: prints a statement
+  # output: prints a statement of fruit
   def first_fruit
-    puts "Grabing the first fruit and the fruit is: #{@fruit}."
+    puts "Grabing the first fruit for your smoothie and the fruit is: #{@fruit}."
   end
 
 
-  # second_fruit method created that prints a statement
+  # method name: second_fruit, no parameters
+  # output:
+  # prints a statement of another fruit
+  def second_fruit
+    puts "Grabing the second fruit for your smoothie and the fruit is: #{@another_fruit}"
+  end
 
 
   # blender method that blends the fruit and another_fruit and creates the smoothie.
@@ -36,3 +41,4 @@ end
 # driver code
 fruit = Smoothie.new("apple", "pear")
 fruit.first_fruit
+fruit.second_fruit
