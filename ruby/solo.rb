@@ -11,6 +11,9 @@
 
 # Release 1: Write Your Class
 class Smoothie
+  # attributes that are readable and writeable
+  attr_accessor :fruit, :another_fruit
+  attr_reader :blender
 
   #method name: initialize,
   #created with two parameters
@@ -21,24 +24,34 @@ class Smoothie
   end
 
   # method name: first_fruit, no parameters,
-  # output: prints a statement of fruit
+  # inside the method:
+  # prints a statement of fruit
   def first_fruit
-    puts "Grabing the first fruit for your smoothie and the fruit is: #{@fruit}."
+    puts "Grabing the first fruit for your smoothie and the fruit is: #{@fruit.capitalize}."
   end
-
 
   # method name: second_fruit, no parameters
-  # output:
+  # inside the method:
   # prints a statement of another fruit
   def second_fruit
-    puts "Grabing the second fruit for your smoothie and the fruit is: #{@another_fruit}"
+    puts "Grabing the second fruit for your smoothie and the fruit is: #{@another_fruit.capitalize}"
   end
 
-
-  # blender method that blends the fruit and another_fruit and creates the smoothie.
+  # method name: blender
+  # inside the method:
+  # blends the first_fruit and second_fruit and creates the smoothie by combining both methods.
+  # output:
+  # smoothie created
+  def blender
+    puts first_fruit
+    puts second_fruit
+    puts "Blending the fruits, one second please"
+     puts "Here is your #{@fruit.upcase}-#{@another_fruit.upcase} smoothie. Enjoy :)!"
+  end
 end
 
 # driver code
-fruit = Smoothie.new("apple", "pear")
-fruit.first_fruit
-fruit.second_fruit
+smothie = Smoothie.new("apple", "pear")
+#smothie.first_fruit
+#smothie.second_fruit
+smothie.blender
