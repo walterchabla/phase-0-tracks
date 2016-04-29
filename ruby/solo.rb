@@ -10,9 +10,16 @@
 #use initialize
 
 # Release 1: Write Your Class
-
+class Smoothie
 
   #initialize method created with two parameters
+  def initialize(fruit, another_fruit)
+    @fruit = fruit
+    @another_fruit = another_fruit
+    puts "testing"
+  end
+end
+fruit = Smoothie.new("apple", "pear")
 
   # fruit method created that prints a statement
 
