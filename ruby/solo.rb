@@ -48,6 +48,10 @@ class Smoothie
     puts "Blending the fruits, one second please"
      puts "Here is your #{@fruit.upcase}-#{@another_fruit.upcase} smoothie. Enjoy :)!"
   end
+
+  def name
+    "#{@fruit.upcase}-#{@another_fruit.upcase}"
+  end
 end
 
 # driver code
@@ -82,8 +86,7 @@ if answer == "yes"
   idx += 1
 else
   # printing each smoothie that was made
-  smoothies_stored.each {|smoothie|
-    puts "This #{smoothie} smoothie was made"}
+  smoothies_stored.each {|smoothie| puts "This #{smoothie.name} smoothie was made"}
   exit
 end
 end
