@@ -12,4 +12,8 @@ class TodoList
     @array.push(item)
   end
 
+  def delete_item(item)
+    @array.delete(item)
+  end
+
 end
