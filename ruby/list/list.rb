@@ -1,26 +1,27 @@
+# class created, name:
+# TodoList
+# 6 methods added to the class
+
 class TodoList
 
-  def initialize(x)
-    @arr = ["do the dishes", "mow the lawn",]
+  def initialize(array)
+    @array = array
   end
 
   def get_items
-    @arr
+    @array
   end
 
-  def add_item(word)
-    @arr << word
-    @arr
+  def add_item(item)
+    @array.push(item)
   end
 
-  def delete_item(word)
-    @arr.delete(word)
-    @arr
+  def delete_item(item)
+    @array.delete(item)
   end
 
-  def get_item(num)
-    @arr.fetch(num)
+  def get_item(i)
+    @array.fetch(i)
   end
 
 end
-
