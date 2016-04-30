@@ -1,3 +1,7 @@
+# class created, name:
+# TodoList
+# 6 methods added to the class
+
 class TodoList
 
   def initialize(array)
