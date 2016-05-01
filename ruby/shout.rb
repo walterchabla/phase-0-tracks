@@ -18,7 +18,13 @@
 
 
 module Shout
-  def screem_phrase(phrase)
+  def shout_phrase(phrase)
     phrase.upcase + "!!!!!!!!!"
   end
+end
+
+class Student
+end
+
+class Neighbor
 end
