@@ -7,7 +7,9 @@ end
 
 # two classes created
 class Bird
+  include Flight
 end
 
 class Plane
+  include Flight
 end
