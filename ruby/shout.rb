@@ -13,5 +13,6 @@ module Shout
 
 end
 
+# Driver code
 p Shout.yell_angrily("HOW")
 p Shout.yelling_happily("HIII")
