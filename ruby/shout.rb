@@ -1,18 +1,24 @@
-module Shout
+# module Shout
   # we'll put some methods here soon, but this code is fine for now
 
   # a yelling angry method
-  def self.yell_angrily(words)
-    words + "!!! + :("
-  end
+  # def self.yell_angrily(words)
+    # words + "!!! + :("
+  # end
 
   # a yelling happy method
-  def self.yelling_happily(word)
-    word + "!!! + :D"
-  end
-
-end
+  # def self.yelling_happily(word)
+    # word + "!!! + :D"
+  # end
+# end
 
 # Driver code
-p Shout.yell_angrily("HOW")
-p Shout.yelling_happily("HIII")
+# p Shout.yell_angrily("HOW")
+# p Shout.yelling_happily("HIII")
+
+
+module Shout
+  def screem_phrase(phrase)
+    phrase.upcase + "!!!!!!!!!"
+  end
+end
