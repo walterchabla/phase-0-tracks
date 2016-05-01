@@ -24,7 +24,16 @@ module Shout
 end
 
 class Student
+  include Shout
 end
 
 class Neighbor
+  include Shout
 end
+
+# driver code
+student = Student.new
+p student.shout_phrase("Welcome to the shouting club")
+
+neighbor = Neighbor.new
+p neighbor.shout_phrase("Neighbor can I borrow some sugar")
