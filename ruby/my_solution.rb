@@ -10,12 +10,16 @@ require_relative 'state_data'
 
 class VirusPredictor
 
+  # initialize method that cointains three arguments, and its declaring the three arguments to instance variables
+  # this method runs when a instance of a class is created.
   def initialize(state_of_origin, population_density, population)
     @state = state_of_origin
     @population = population
     @population_density = population_density
   end
 
+  # virus_effects is calling another methods predicted_deaths thats cointains two parameters
+  # and speed_of_spread that contains two parameters
   def virus_effects
     predicted_deaths(@population_density, @population, @state)
     speed_of_spread(@population_density, @state)
@@ -23,6 +27,9 @@ class VirusPredictor
 
   private
 
+  # predicted_deaths methods cointains two arguments
+  # it has an IF statement to predict number of deaths base on the population density
+  # and prints a sentence
   def predicted_deaths(population_density, population, state)
     # predicted deaths is solely based on population density
     if @population_density >= 200
