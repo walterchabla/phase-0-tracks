@@ -4,8 +4,8 @@
 # We spent [#] hours on this challenge.
 
 # EXPLANATION OF require_relative
-#
-#
+# Require realative is to look for files that are in the same directory or in a relative path.
+# require is to look for files that are external or in another directory, and its using a load path.
 require_relative 'state_data'
 
 class VirusPredictor
