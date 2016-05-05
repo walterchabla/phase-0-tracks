@@ -2,7 +2,7 @@
 
 # ask 5 questions for the designer or user about name, age, likes animals,decor theme and which room?
 # store the answer:
-# name = gets.chomp (use this gets.chompfor all questions, use different variables)
+# name = gets.chomp (use this gets.chomp for all questions, use different variables)
 # if answer is equal to a symbol(key) ask for another answer and update the hash
 # save their answer and put into a hash:
 # declare a new hash, then add symbols to the hash with answers as values:
@@ -11,10 +11,6 @@
 
 puts "What is your name?"
 name = gets.chomp.capitalize
-if name == "name"
-  puts "Please put a valid name?"
-  name = gets.chomp.capitalize
-end
 
 puts "How old are you?"
 age = gets.chomp.to_i
@@ -33,10 +29,18 @@ theme = gets.chomp
 puts "Which room would you like to decorate?"
 room = gets.chomp
 
+10.times {print "-"}
 applicant = Hash.new
 applicant = {name: name, age: age, likes_animals: animals, decor_theme: theme, room: room}
+puts "\nName: #{applicant[:name]}\nAge: #{applicant[:age]}\nLikes Animal: #{applicant[:likes_animals]}\nTheme: #{applicant[:decor_theme]}\nRoom to decorate: #{applicant[:room]}"
 
-puts applicant
+if name == "Name"
+  puts "Please put a valid name?"
+  name = gets.chomp.capitalize
+  applicant[:name] = name
+end
 
-exit
+10.times {print "-"}
+puts "\nName: #{applicant[:name]}\nAge: #{applicant[:age]}\nLikes Animal: #{applicant[:likes_animals]}\nTheme: #{applicant[:decor_theme]}\nRoom to decorate: #{applicant[:room]}"
+
 
