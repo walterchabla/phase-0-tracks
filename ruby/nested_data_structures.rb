@@ -9,24 +9,24 @@
 
 soccer_stadium = {
   "front_seats" => {
-    "available_seats" => 10000,
-    "chair_type" => [
+    available_seats: 10000,
+    chair_type: [
       "comfortable",
       "close to the game"
     ]
   },
 
   "middle_seats" => {
-    "available_seats" => 20000,
-    "chair_type" => [
+    available_seats: 20000,
+    chair_type: [
       "not so comfortable",
       "not so close to the game"
     ]
   },
 
   "last_seats" => {
-    "available_seats" => 20000,
-    "chair_type" => [
+    available_seats: 20000,
+    chair_type: [
       "regular chair",
       "far to watch the game",
       "lowest price"
@@ -49,15 +49,18 @@ soccer_stadium = {
 
 
 # drive code
-p soccer_stadium["front_seats"]["chair_type"][1]
-p soccer_stadium["front_seats"]["available_seats"]
+puts "#{soccer_stadium["front_seats"][:available_seats]} number of available seats in the front."
 
-p soccer_stadium["middle_seats"]["available_seats"]
-soccer_stadium["middle_seats"]["chair_type"][2] = "not so expensive"
-p soccer_stadium["middle_seats"]["chair_type"]
+puts "Pros of being in front seat: \n -#{soccer_stadium["front_seats"][:chair_type][1].upcase}."
 
-p soccer_stadium["last_seats"]["chair_type"]
+puts "#{soccer_stadium["middle_seats"][:available_seats]} number of available seats in the middle."
 
-p soccer_stadium["field"]["goalmouth"]
-p soccer_stadium["field"]["field_type"][2]
+puts "#{soccer_stadium["middle_seats"][:chair_type][2]  = "not so expensive"}"
+
+puts soccer_stadium["middle_seats"][:chair_type]
+
+puts soccer_stadium["last_seats"][:chair_type]
+
+puts soccer_stadium["field"]["goalmouth"]
+puts soccer_stadium["field"]["field_type"][2]
 
