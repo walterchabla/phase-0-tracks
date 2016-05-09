@@ -1,39 +1,39 @@
-# Release 1: Write a Simple Module
-#module Shout
-  # we'll put some methods here soon, but this code is fine for now!
+# module Shout
+  # we'll put some methods here soon, but this code is fine for now
 
-  #def self.yell_angrily(words)
-    #words + "!!!" + " :("
-  #end
+  # a yelling angry method
+  # def self.yell_angrily(words)
+    # words + "!!! + :("
+  # end
 
-  #def yelling_happily(word)
-    #puts "#{word} !! ( Angry Face)"
-  #end
+  # a yelling happy method
+  # def self.yelling_happily(word)
+    # word + "!!! + :D"
+  # end
+# end
 
-  #module_function :yelling_happily
-#end
+# Driver code
+# p Shout.yell_angrily("HOW")
+# p Shout.yelling_happily("HIII")
 
-#p Shout.yell_angrily("My bike")
-#Shout.yelling_happily("Awesome")
-
-# Release 3: Convert a Standalone Module to a Mixin
 
 module Shout
-  def yelled(word)
-    puts "#{word}!! "
+  def shout_phrase(phrase)
+    phrase.upcase + "!!!!!!!!!"
   end
 end
 
-class Person
+class Student
   include Shout
 end
 
-class Dog
+class Neighbor
   include Shout
 end
 
-person = Person.new
-person.yelled("Great job")
+# driver code
+student = Student.new
+p student.shout_phrase("Welcome to the shouting club")
 
-dog = Dog.new
-dog.yelled("WOOF")
+neighbor = Neighbor.new
+p neighbor.shout_phrase("Neighbor can I borrow some sugar")
