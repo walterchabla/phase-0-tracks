@@ -48,14 +48,27 @@ function comparing(object1, object2) {
 // Output for the function:
 // Random 3 words on a array
 
-// Driver Code:
-console.log("---------------")
+function random_words(integer) {
+  var new_word = [];
+  for (var i = 0; i < integer; i++){
+    var words = ["Hello", "Space", "Lake", "Walter", "DBC", "Mac", "Dominos", "Training", "GSGGbs", "LOL", "LMAO"];
+    var random = Math.floor(Math.random() * words.length);
+    var word = words[random];
+    new_word.push(word);
+    new_word;
+    }
+    console.log(new_word);
+}
 
-var phrases = ["long phrase","longest phrase","longer phrase"]
+
+// Driver Code:
+console.log("---------------");
+
+var phrases = ["long phrase","longest phrase","longer phrase"];
 longest_word(phrases);
 //var test = ["word1", "walter", "Car", "longest word"];
 //longest_word(test);
-console.log("---------------")
+console.log("---------------");
 
 var dog = {name: 'Boby', age: 6};
 var cat = {age: 8, name: 'Speedy'};
@@ -64,3 +77,18 @@ comparing(dog, cat);
 comparing(dog, car);
 
 console.log("---------------");
+
+random_words(9);
+random_words(6);
+random_words(4);
+random_words(7);
+random_words(2);
+random_words(5);
+random_words(3);
+random_words(10);
+random_words(6);
+random_words(4);
+random_words(1);
+
+// i cant not use longest_word with random_wwrds
+//longest_word(random_words(3));
