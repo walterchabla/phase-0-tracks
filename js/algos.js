@@ -37,7 +37,20 @@ function comparing(object1, object2) {
   }
 }
 
+// Release 2: Generate Random Test Data
+// Write a function that takes an integer for length, and builds and returns an array of strings of the given length.
+// Declaring name of the function:
+// RANDOM_WORDS(LENGTH)
+// Input for the function:
+// Array with random words inside,
+// Use a FOR loop to loop the array for number of times ,
+// Use Math.random to get random words equal to the length
+// Output for the function:
+// Random 3 words on a array
+
 // Driver Code:
+console.log("---------------")
+
 var phrases = ["long phrase","longest phrase","longer phrase"]
 longest_word(phrases);
 //var test = ["word1", "walter", "Car", "longest word"];
