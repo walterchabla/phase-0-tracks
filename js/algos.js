@@ -18,7 +18,7 @@ function longest_word(array) {
 // Release 1: Find a Key-Value Match
 // Write a function that takes two objects and checks to see if the objects share at least one key-value pair.
 // Declare name of the function:
-// COMPARING(PARAMETER)
+// COMPARING(PARAMETER1, PARAMETER2)
 // Input for the function:
 // Using FOR to loop thru the oobjects using their keys
 // I'm going to use an IF statement and then compare the two objects using 'hasOwnProperty(key)'.
@@ -26,8 +26,28 @@ function longest_word(array) {
 // the function would return true if one key-value pair matches between the two objects.
 // or the function should return false if no pairs match.
 
+function comparing(object1, object2) {
+
+  for (var key in object1 && object2) {
+      if (object1.hasOwnProperty(key) === object2.hasOwnProperty(key)) {
+        return console.log(true);
+      } else {
+        return console.log(false);
+      }
+  }
+}
+
 // Driver Code:
 var phrases = ["long phrase","longest phrase","longer phrase"]
 longest_word(phrases);
 //var test = ["word1", "walter", "Car", "longest word"];
 //longest_word(test);
+console.log("---------------")
+
+var dog = {name: 'Boby', age: 6};
+var cat = {age: 8, name: 'Speedy'};
+var car = {color: "red", num_doors: 2};
+comparing(dog, cat);
+comparing(dog, car);
+
+console.log("---------------");
