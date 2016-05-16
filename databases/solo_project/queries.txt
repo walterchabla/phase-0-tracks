@@ -89,3 +89,9 @@ Susie O'cono  susieocnor@aol.com   Sales Person
 7           Melisa Yingl
 9           Jackie Kuo  
 10          Susie O'cono
+
+
+6) Try a few different joins in your database, and record the commands and the output
+    RIGHT OUTER, FULL OUTER
+    Command: sqlite> SELECT Name, Date_hire, Department FROM employees FULL OUTER JOIN department ON employees.Department_id = department.Dearment_id;
+    Output: Error: RIGHT and FULL OUTER JOINs are not currently supported
