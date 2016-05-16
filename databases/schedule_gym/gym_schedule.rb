@@ -25,3 +25,6 @@ db.execute(create_table_cmd)
 def insert_schedule(db, went_day, hours_spend, inspirational_quote)
   db.execute("INSERT INTO schedule (went_day, hours_spend, inspirational_quote) VALUES (?, ?, ?)", [went_day, hours_spend, inspirational_quote])
 end
+
+# testing method
+insert_schedule(db, "Monday", "2 hours", "It hurts now but one day it will be your warm up. -MGQ")
