@@ -1,0 +1,97 @@
+1) Display the information in one table (either table is fine).
+    Command: sqlite> SELECT * FROM employees;
+    Output: 
+    id          Name          Date_hire   Email                Department_id
+----------  ------------  ----------  -------------------  -------------
+1           Jaime Muller  2010-07-04  jaimemuller@aol.com  2            
+2           Jorge Lopez   2013-05-15  jorgelopez@yahoo.co  4            
+3           Walter Chabl  2008-09-05  walterchabla@gmail.  1            
+4           Frank Chabla  2016-02-06  frankchabla@yahoo.c  5            
+5           Chang Young   2011-09-24  changyoung@aol.com   2            
+6           Andrew Coyt   2012-04-09  andrewcoyt@live.com  3            
+7           Melisa Yingl  2012-01-07  melisayingling@gmai  3            
+8           Veronica Rit  2016-03-28  veronicaritcey@gmai  5            
+9           Jackie Kuo    2016-04-02  jackiekuo@gmail.com  5            
+10          Susie O'cono  2015-02-13  susieocnor@aol.com   3 
+    Command: sqlite> SELECT * FROM department;
+    Output: 
+    Deartment_id  Department     
+------------  ---------------
+1             Humman Resource
+2             Sales Manager  
+3             Sales Person   
+4             Training Manage
+5             Training Employ  
+
+2) Update an item that meets some condition (you can choose a condition that makes sense).
+    Condition: Training passed now becomes a sales person.
+    Command: sqlite> UPDATE employees SET Department_id=2 WHERE name= "Frank Chabla";
+           sqlite> SELECT * FROM employees;
+    Output:
+    id          Name          Date_hire   Email                Department_id
+----------  ------------  ----------  -------------------  -------------
+1           Jaime Muller  2010-07-04  jaimemuller@aol.com  2            
+2           Jorge Lopez   2013-05-15  jorgelopez@yahoo.co  4            
+3           Walter Chabl  2008-09-05  walterchabla@gmail.  1            
+4           Frank Chabla  2016-02-06  frankchabla@yahoo.c  2            
+5           Chang Young   2011-09-24  changyoung@aol.com   2            
+6           Andrew Coyt   2012-04-09  andrewcoyt@live.com  3            
+7           Melisa Yingl  2012-01-07  melisayingling@gmai  3            
+8           Veronica Rit  2016-03-28  veronicaritcey@gmai  5            
+9           Jackie Kuo    2016-04-02  jackiekuo@gmail.com  5            
+10          Susie O'cono  2015-02-13  susieocnor@aol.com   3
+
+3) Display the information in both tables using one query.
+    Command: sqlite> SELECT * FROM employees, department WHERE employees.Department_id = department.Deartment_id;
+    Output: 
+    id          Name          Date_hire   Email                Department_id  Deartment_id  Department   
+----------  ------------  ----------  -------------------  -------------  ------------  -------------
+1           Jaime Muller  2010-07-04  jaimemuller@aol.com  2              2             Sales Manager
+2           Jorge Lopez   2013-05-15  jorgelopez@yahoo.co  4              4             Training Mana
+3           Walter Chabl  2008-09-05  walterchabla@gmail.  1              1             Humman Resour
+4           Frank Chabla  2016-02-06  frankchabla@yahoo.c  2              2             Sales Manager
+5           Chang Young   2011-09-24  changyoung@aol.com   2              2             Sales Manager
+6           Andrew Coyt   2012-04-09  andrewcoyt@live.com  3              3             Sales Person 
+7           Melisa Yingl  2012-01-07  melisayingling@gmai  3              3             Sales Person 
+8           Veronica Rit  2016-03-28  veronicaritcey@gmai  5              5             Training Empl
+9           Jackie Kuo    2016-04-02  jackiekuo@gmail.com  5              5             Training Empl
+10          Susie O'cono  2015-02-13  susieocnor@aol.com   3              3             Sales Person 
+
+4) Display a narrower selection of columns (fewer columns than all of them, in other words) from both tables using one query.
+    Command: sqlite> SELECT employees.name, employees.Email, department.Department FROM employees JOIN department ON employees.department_id = department.Deartment_id;
+    Output: 
+    Name          Email                Department   
+------------  -------------------  -------------
+Jaime Muller  jaimemuller@aol.com  Sales Manager
+Jorge Lopez   jorgelopez@yahoo.co  Training Mana
+Walter Chabl  walterchabla@gmail.  Humman Resour
+Frank Chabla  frankchabla@yahoo.c  Sales Manager
+Chang Young   changyoung@aol.com   Sales Manager
+Andrew Coyt   andrewcoyt@live.com  Sales Person 
+Melisa Yingl  melisayingling@gmai  Sales Person 
+Veronica Rit  veronicaritcey@gmai  Training Empl
+Jackie Kuo    jackiekuo@gmail.com  Training Empl
+Susie O'cono  susieocnor@aol.com   Sales Person 
+
+5) Delete an item that meets some condition (you can choose a condition that makes sense)
+    Condition: Employee deleted, did not pass training.
+    Command: sqlite> DELETE FROM employees WHERE Name="Veronica Ritcey" AND Department_id=5;
+             sqlite> SELECT id, name FROM employees;
+    Output: 
+    id          Name        
+----------  ------------
+1           Jaime Muller
+2           Jorge Lopez 
+3           Walter Chabl
+4           Frank Chabla
+5           Chang Young 
+6           Andrew Coyt 
+7           Melisa Yingl
+9           Jackie Kuo  
+10          Susie O'cono
+
+
+6) Try a few different joins in your database, and record the commands and the output
+    RIGHT OUTER, FULL OUTER
+    Command: sqlite> SELECT Name, Date_hire, Department FROM employees FULL OUTER JOIN department ON employees.Department_id = department.Dearment_id;
+    Output: Error: RIGHT and FULL OUTER JOINs are not currently supported
