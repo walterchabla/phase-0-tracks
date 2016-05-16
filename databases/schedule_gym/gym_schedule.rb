@@ -1,8 +1,7 @@
 # Releases 0-3: Build Something Awesome
 
-# require gems
+# require gem
 require 'sqlite3'
-require 'faker'
 
 # created SQLite3 database
 db = SQLite3::Database.new("schedule.db")
@@ -34,23 +33,89 @@ def retrieve_data(db)
   schedules = db.execute("SELECT * FROM schedule")
   schedules.each do |schedule|
     puts "--------------------------------"
-    puts "Day went to the gym: #{schedule['went_day']}\nHours spent in the gym: #{schedule['hours_spend']}\nInspirational quote of the day: #{schedule['inspirational_quote']}"
+    puts "Day went to the gym: #{schedule['went_day']}\nHours spent in the gym: #{schedule['hours_spend']}\nInspirational quote to motivate you to go tomorrow: #{schedule['inspirational_quote']}\nNumber if need to update any of this information: #{schedule['id']}"
     end
 end
 
 # testing method
 # retrieve_data(db)
 
+# methods to update data from schedule table,
+# method to update went_day
+def update_day(db, id_num, new_data)
+  db.execute("UPDATE schedule SET went_day=(?) WHERE id=(?)", [new_data, id_num])
+  schedules = db.execute("SELECT * FROM schedule WHERE id=(?)",[id_num])
+  schedules.each do |schedule|
+    puts "--------------------------------"
+    puts "Day went to the gym: #{schedule['went_day']}\nHours spent in the gym: #{schedule['hours_spend']}\nInspirational quote to motivate you to go tomorrow: #{schedule['inspirational_quote']}\nNumber if need to update any of this information: #{schedule['id']}"
+  end
+end
+
+# method to update hours_spend
+def update_hour(db, id_num, new_data)
+  db.execute("UPDATE schedule SET hours_spend=(?) WHERE id=(?)", [new_data, id_num])
+  schedules = db.execute("SELECT * FROM schedule WHERE id=(?)",[id_num])
+  schedules.each do |schedule|
+    puts "--------------------------------"
+    puts "Day went to the gym: #{schedule['went_day']}\nHours spent in the gym: #{schedule['hours_spend']}\nInspirational quote to motivate you to go tomorrow: #{schedule['inspirational_quote']}\nNumber if need to update any of this information: #{schedule['id']}"
+  end
+end
+
+# method to update inspirational quote
+def update_inspirational_quote(db, id_num, new_data)
+  db.execute("UPDATE schedule SET inspirational_quote=(?) WHERE id=(?)", [new_data, id_num])
+  schedules = db.execute("SELECT * FROM schedule WHERE id=(?)",[id_num])
+  schedules.each do |schedule|
+    puts "--------------------------------"
+    puts "Day went to the gym: #{schedule['went_day']}\nHours spent in the gym: #{schedule['hours_spend']}\nInspirational quote to motivate you to go tomorrow: #{schedule['inspirational_quote']}\nNumber if need to update any of this information: #{schedule['id']}"
+  end
+end
+
 #User interface
+idx = 0
+while idx != 'done'
+  puts "--------------------------------"
+  puts "Nice job on going to the gym!\nLets keep track of days and hours at the gym so you can see your progress.\nIf you need to update information about day or hour type 'update' or to exit type 'done' otherwise press enter to continue:\n   "
+  answer = gets.chomp
 
-puts "Nice job on going to the gym!\nLets keep track of days and hours at the gym so you can see your progress.\nIf you need to update information about day or hour type 'update' otherwise press enter to continue"
-answer = gets.chomp
+  if answer == 'update'
+    retrieve_data(db)
+    puts "Type number of the information to update:\n   "
+    number = gets.chomp
+    puts "What would you like to update: day, hours or inspirational quote:\n   "
+    data = gets.chomp
+    puts "Type new information to update:\n   "
+    data_update = gets.chomp
+    case data
+    when "day"
+      update_day(db, number, data_update)
+      exit
+    when "hours"
+      update_hour(db, number, data_update)
+      exit
+    when "inspirational quote"
+      update_inspirational_quote(db, number, data_update)
+      exit
+    end
+  else answer == 'done'
+    exit
+  end
 
-puts "Day that you went to the gym?"
-day = gets.chomp
+  puts "Day that you went to the gym?\n   "
+  day = gets.chomp
 
-puts "How many hours did you spent in the gym?"
-hours = gets.chomp
+  puts "How many hours did you spent in the gym?\n   "
+  hours = gets.chomp
 
-puts "Write an inspirational quote to inspire you to go to the gym tomorrow."
-quote = gets.chomp
+  puts "Write an inspirational quote to inspire you to go to the gym tomorrow.\n   "
+  quote = gets.chomp
+  insert_schedule(db, day, hours, quote)
+
+  puts "If you like to see your progress type 'yes'\n   "
+  see_data = gets.chomp
+  if see_data == 'yes'
+    retrieve_data(db)
+  end
+
+idx += 1
+end
