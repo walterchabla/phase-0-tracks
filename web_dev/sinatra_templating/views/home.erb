@@ -7,9 +7,16 @@
   <h1>Student Management System</h1>
   <p>Welcome to the student management system.</p>
   <p>Click <a href="students/new">here</a> to create a new student.</p>
+  <p>Click <a href="/students/add/campus">here</a> to creating new campus.</p>
   <ul>
     <% @students.each do |student| %>
       <li><%= student['name'] %>, <%= student['age'] %></li>
+    <% end %>
+  </ul>
+<h1>Classes coming soon to:</h1>
+<ul>
+    <% @campus.each do |campuss| %>
+      <li><%= campuss['location'] %></li>
     <% end %>
   </ul>
 </body>
