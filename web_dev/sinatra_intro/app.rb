@@ -46,7 +46,16 @@ get '/students/:id' do
 end
 
 # Release 0: Add Routes
-# A /contact route that displays an address (you can make up the address).
+# 1) A /contact route that displays an address (you can make up the address).
 get '/contact' do
   "Addres: 116th 3Ave, Harlem NY"
+end
+
+# 2) A /great_job route that can take a person's name as a query parameter (not a route parameter) and say "Good job, [person's name]!". If the query parameter is not present, the route simply says "Good job!
+get '/great_job/:name' do
+  "Good job, #{params[:name]}!"
+end
+
+get '/great_job' do
+  "Good job!"
 end
